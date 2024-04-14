@@ -1,2 +1,3 @@
-import chatTrigger from "./triggers/chat";
-import commandTrigger from "./triggers/command";
+import "./triggers/chat";
+import "./triggers/command";
+import "./triggers/step";

@@ -14,11 +14,17 @@ export default (value, type) => {
     case "Auto transfer":
       data.autoTransfer = dataValue;
       break;
+    case "Auto warp":
+      data.autoWarp = dataValue;
+      break;
     case "Mineshaft announcement":
       data.shaftAnnouncement = dataValue;
       break;
     case "Scrap notification":
       data.scrapNotification = dataValue;
+      break;
+    case "Corpse finder":
+      data.corpseFinder = dataValue;
       break;
   }
   FileLib.write("ShaftUtilities", "data.json", JSON.stringify(data));

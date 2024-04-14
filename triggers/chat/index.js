@@ -1,14 +1,17 @@
-import { autoTransferFunction, autoTransferCriteria } from "./autoTransfer";
-import {
-  shaftAnnouncementFunction,
-  shaftAnnouncementCriteria,
-} from "./shaftAnnouncement";
-import { scrapNotifFunction, scrapNotifCriteria } from "./scrapNotif";
+import autoTransfer from "./autoTransfer";
+import autoWarp from "./autoWarp";
+import shaftAnnouncement from "./shaftAnnouncement";
+import scrapNotif from "./scrapNotif";
 
-register("chat", autoTransferFunction).setCriteria(autoTransferCriteria);
-register("chat", shaftAnnouncementFunction).setCriteria(
-  shaftAnnouncementCriteria
-);
-register("chat", scrapNotifFunction).setCriteria(scrapNotifCriteria);
+import {
+  partyChatCriteria,
+  shaftAnnouncementCriteria,
+  scrapNotifCriteria,
+} from "../utils/constants";
+
+register("chat", autoTransfer).setCriteria(partyChatCriteria);
+register("chat", autoWarp).setCriteria(partyChatCriteria);
+register("chat", shaftAnnouncement).setCriteria(shaftAnnouncementCriteria);
+register("chat", scrapNotif).setCriteria(scrapNotifCriteria);
 
 export default true;

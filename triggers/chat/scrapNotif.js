@@ -1,4 +1,4 @@
-export const scrapNotifFunction = (event) => {
+export default scrapNotifFunction = (event) => {
   const data = JSON.parse(FileLib.read("ShaftUtilities", "data.json"));
   if (!data.scrapNotification) return;
   ChatLib.chat("&6&lSCRAP! &7You found a scrap by mining!");
@@ -11,5 +11,3 @@ export const scrapNotifFunction = (event) => {
     )
   );
 };
-
-export const scrapNotifCriteria = "EXCAVATOR! You found a Suspicious Scrap!";
