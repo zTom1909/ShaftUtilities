@@ -14,8 +14,11 @@ export default register("step", () => {
     .filter((line) => line.toString().split("").includes("⏣"))[0]
     ?.toString();
   const locationString = removeUnicode(ChatLib.removeFormatting(location));
-  if (!locationString.includes("Glacite Mineshafts")) return;
-  
+  if (!locationString.includes("Glacite Mineshafts")) {
+    loggedCoords = [];
+    return;
+  }
+
   const data = JSON.parse(FileLib.read("ShaftUtilities", "data.json"));
   if (!data.corpseFinder) return;
 

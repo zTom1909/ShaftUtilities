@@ -1,1 +1,7 @@
-{"autoTransfer":true,"autoWarp":true,"scrapNotification":true,"shaftAnnouncement":true,"corpseFinder":false}
+{
+  "autoTransfer": true,
+  "autoWarp": true,
+  "scrapNotification": true,
+  "shaftAnnouncement": true,
+  "corpseFinder": false
+}
