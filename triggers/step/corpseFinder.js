@@ -69,7 +69,7 @@ export default register("step", () => {
   });
 
   if (corpseMessages.length) {
-    ChatLib.command(`ac ${corpseMessages[0]}`);
+    ChatLib.command(`pc ${corpseMessages[0]}`);
     corpseMessages.shift();
   }
 })
